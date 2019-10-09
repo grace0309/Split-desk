@@ -20,11 +20,11 @@ display()
 import { bindNearby } from '../components/navigator';
 bindNearby();
 
-import { ching } from '../components/ching';
-ching();
+// import { ching } from '../components/ching';
+// ching();
 
-import { confetti } from '../components/confetti';
-confetti();
+// import { confetti } from '../components/confetti';
+// confetti();
 
 import { selectorhide } from '../components/confirm';
 selectorhide();
