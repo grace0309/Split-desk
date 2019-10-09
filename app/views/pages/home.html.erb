@@ -1,6 +1,6 @@
-<%= render partial: 'shared/header', locals: {:title => "Hi, #{@user.first_name}", :myclass => "main-title" } %>
+<%= render partial: 'shared/header' %>
 
-<%= simple_form_for :search, url: search_path, method: :get do |f| %>
+<!-- <%#= simple_form_for :search, url: search_path, method: :get do |f| %>
   <div class="search-form-control form-group d-flex">
     <input class="form-control string required" type="text" name="query" id="search_query" >
     <input class="form-control string required " type="number" name="location[lat]" id="lat_query" hidden="true"/>
@@ -13,7 +13,7 @@
         Near me
       </button>
   </div>
-<% end %>
+<%# end %> -->
 
 <div class="container my-5 py-2">
   <% if @posts.empty? %>
@@ -45,16 +45,16 @@
     </small>
   <!-- Card content -->
     <%= link_to post_path(post) do %>
-        <% if post.photo.present? %>
-        <%= cl_image_tag post.photo, class: "index-img"%>
-      <% else %>
-      <%= image_tag"https://res.cloudinary.com/dtsg1dlrd/image/upload/v1568106458/Photos/#{post.store_name.downcase.delete(' ')}", class: "home-img" %>
-      <% end %>
+<!--         <%# if post.photo.present? %>
+        <%#= cl_image_tag post.photo, class: "index-img"%>
+      <%# else %>
+      <%#= image_tag"#{https://res.cloudinary.com/dtsg1dlrd/image/upload/v1568106458/Photos/#{post.store_name.downcase.delete(' ')}}", class: "home-img" %>
+      <%# end %>
       <svg class="homecard__svg" viewBox="0 0 800 500">
 
         <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="white" fill="white"/>
         <path  d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="white" stroke-width="3" fill="transparent"/>
-      </svg>
+      </svg> -->
 
 
       <div class="card-body home-content pt-4">
