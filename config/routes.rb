@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  get 'favourites/update'
-  get 'deals/new'
-  get 'deals/create'
-  devise_for :users
   root to: 'pages#home'
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :posts do
     resources :transactions, only: [ :create, :new]
@@ -20,4 +18,7 @@ Rails.application.routes.draw do
   get "/chats", to: "pages#chats", as: :chats
   get "/results", to: "pages#search", as: :search
 
+  get 'favourites/update'
+  get 'deals/new'
+  get 'deals/create'
 end

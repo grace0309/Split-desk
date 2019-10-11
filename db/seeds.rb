@@ -11,10 +11,10 @@ require 'nokogiri'
 # puts 'Destroying data...'
 # Message.destroy_all
 # Favourite.destroy_all
-# Post.destroy_all
-# Category.destroy_all
-# User.destroy_all
-# Deal.destroy_all
+Post.destroy_all
+Category.destroy_all
+Deal.destroy_all
+User.destroy_all
 
 # puts 'Creating Categories'
 # Category.create(name: 'Fashion')
